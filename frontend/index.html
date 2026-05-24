@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeRefine | AI Code Optimizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-code-branch"></i> CodeRefine
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="https://github.com" target="_blank">
+                <button class="github-btn"><i class="fa-brands fa-github"></i> GitHub</button></a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <header class="hero-section">
+            <h1><span class="gradient-text">Generative AI</span> Powered<br>Code Optimization</h1>
+            <p>Paste your snippet below. Let our AI refine logic, reduce complexity, and explain the changes.</p>
+        </header>
+
+        <section class="editor-container">
+
+            <!-- Controls -->
+            <div class="controls">
+                <div class="language-select-wrapper">
+                    <label for="language"><i class="fa-solid fa-layer-group"></i> Language:</label>
+                    <select id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </div>
+                <button id="optimizeBtn" class="primary-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Optimize Code
+                </button>
+            </div>
+
+            <!-- Workspace -->
+            <div class="workspace">
+
+                <!-- Input Panel -->
+                <div class="panel input-panel">
+                    <div class="panel-header">
+                        <span><i class="fa-regular fa-file-code"></i> Original Code</span>
+                        <span class="badge">Input</span>
+                    </div>
+                    <textarea id="codeInput" placeholder="// Paste your code here..." spellcheck="false"></textarea>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="panel output-panel">
+                    <div class="panel-header">
+                        <span><i class="fa-solid fa-check-double"></i> Optimized Result</span>
+                        <div class="badges">
+                            <span id="timePrev" class="badge complexity">Time: --</span>
+                            <span class="arrow">→</span>
+                            <span id="timeNew" class="badge complexity success">Time: --</span>
+                        </div>
+                    </div>
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Analyzing logic & optimizing...</p>
+                    </div>
+                    <pre id="codeOutput"
+                        class="code-display"><code class="language-javascript">// Result will appear here...</code></pre>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Explanation Section -->
+        <section id="explanationSection" class="explanation-container hidden">
+            <h2><i class="fa-solid fa-lightbulb"></i> Optimization Insights</h2>
+            <div id="explanationContent" class="explanation-content">
+                <!-- Dynamic content injected here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Chatbot -->
+    <div class="chatbot-widget">
+        <button id="chatToggle" class="chat-toggle">
+            <i class="fa-solid fa-robot"></i>
+        </button>
+
+        <div class="chat-window hidden" id="chatWindow">
+            <div class="chat-header">
+                <span>CodeRefine Assistant</span>
+                <i class="fa-solid fa-xmark close-chat" id="closeChat"></i>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <p>Hi! I'm here to explain the optimizations. Ask me anything!</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask a question..." autocomplete="off">
+                <button id="sendChat"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
