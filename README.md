@@ -1,73 +1,60 @@
 # 🔧 Code Refiner AI
 
-> Paste messy code. Get clean, optimized, efficient code — instantly.
+Paste messy code. Get clean, optimized code back — instantly.
 
-Built at **Generative AI Hackathon 2026** | Idea & Development by Sanjana Adigoppula
-
----
-
-## 💡 What Problem Does It Solve?
-
-Beginners often write code that works but is slow and inefficient.
-Code Refiner fixes that — it takes your code and:
-- Makes it faster ⚡
-- Reduces time complexity 📉
-- Converts it to another language 🔄
-- Explains it through a chatbot 🤖
+Built at **Generative AI Hackathon 2026** by Sanjana Adigoppula.
 
 ---
 
-## 🎯 Key Features
+## The Problem
 
-| Feature | Description |
-|---|---|
-| 🚀 Code Optimization | Rewrites your code to be faster and more efficient |
-| 🔄 Language Conversion | Convert Java → Python, C++ → JavaScript and more |
-| 🤖 AI Chatbot | Ask coding doubts, get instant answers |
-| 🌍 Multi-language Support | Java, C, C++, Python, JavaScript |
-| 👶 Beginner Friendly | Simple UI anyone can use |
+Beginners often write code that works but is slow, repetitive, or hard to read — and don't always know how to fix it. Most online tools either just format code (indentation only) or require you to already know what's wrong.
 
----
+## The Solution
 
-## 🛠️ Tech Stack
+Code Refiner takes any pasted code and:
+- Rewrites it to be faster and more efficient
+- Reduces time complexity where possible
+- Converts it between languages (e.g. Java → Python, C++ → JavaScript)
+- Answers coding questions through a built-in AI chatbot
 
-**Frontend**
-- HTML, CSS, JavaScript
+## Live Demo
 
-**Backend**
-- Node.js, Express.js
+👉 [code-optimize-frontend.onrender.com](https://code-optimize-frontend.onrender.com)
 
-**AI Integration**
-- Groq API — for code optimization and chatbot
+## Screenshot
 
----
+![Code Refiner UI](assets/screenshots/app-ui.png)
 
-## ⚙️ Setup & Run Locally
+## Tech Stack
 
-### Step 1 — Clone the project
-git clone https://github.com/adigoppulasanjana13-eng/code-refiner.git
+**Frontend:** HTML, CSS, JavaScript
+**Backend:** Node.js, Express.js
+**AI:** Groq API (code optimization + chatbot)
 
-### Step 2 — Install dependencies
-cd backend
+## Run It Locally
+
+```bash
+git clone https://github.com/adigoppulasanjana13-eng/CodeRefine.git
+cd CodeRefine/backend
 npm install
+```
 
-### Step 3 — Add your API key
-
-Create a `.env` file inside the backend folder:
+Create a `.env` file inside `backend/`:
+```
 GROQ_API_KEY=your_groq_api_key_here
+```
+Get a free key at [console.groq.com](https://console.groq.com).
 
-Get your free key from 👉 https://console.groq.com
-
-### Step 4 — Start the server
+```bash
 npm start
+```
+Open `http://localhost:3000` in your browser.
 
-### Step 5 — Open in browser
-http://localhost:3000
+## Project Structure
 
----
-
-## 📁 Project Structure
-code-refiner/
+```
+CodeRefine/
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
@@ -75,25 +62,13 @@ code-refiner/
 ├── backend/
 │   ├── server.js
 │   ├── package.json
-│   ├── package-lock.json
 │   └── .env.example
 └── README.md
+```
 
----
+## About
 
-## 🧠 How I Built This
+Built solo during a hackathon — identified that beginners struggle to write efficient code and built a tool to solve that directly, using the Groq API for optimization and chat.
 
-This project was built during a hackathon under time pressure.
-The entire idea was mine — I identified that beginners struggle
-with writing efficient code and created a tool to solve that.
-
-I used Anti Gravity platform and Groq API to bring the idea to life,
-focusing on making it simple and useful for everyday developers.
-
----
-
-## 👩‍💻 Author
-
-**Sanjana Adigoppula**
-2nd Year CSE — Anurag University, Hyderabad
-GitHub: https://github.com/adigoppulasanjana13-eng
+**Sanjana Adigoppula** — 3rd Year CSE, Anurag University, Hyderabad
+[GitHub](https://github.com/adigoppulasanjana13-eng)
