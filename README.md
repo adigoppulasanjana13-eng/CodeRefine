@@ -24,7 +24,7 @@ Code Refiner takes any pasted code and:
 
 ## Screenshot
 
-![Code Refiner UI](assets/screenshots/app-ui.png)
+<img width="1322" height="806" alt="coderefine" src="https://github.com/user-attachments/assets/783a846b-c03b-49d3-a64c-a52b9a4b162a" />
 
 ## Tech Stack
 
